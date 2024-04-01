@@ -26,6 +26,10 @@
     <link href="css/style.css" rel="stylesheet">
     <style>
         /* Style for the icon link */
+        .fnt {
+            margin-top: 10px;
+            font-size: 18px;
+        }
         .icon-link {
           display: inline-block;
           margin-right: 10px; /* Adjust margin as needed */
@@ -37,6 +41,41 @@
           height: 100px; /* Adjust height as needed */
           vertical-align: middle;
         }
+        .container1 {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .image-card {
+        flex: 0 0 calc(33.33% - 20px); /* Set width for each image card */
+        margin: 10px;
+        text-align: center;
+    }
+
+    .image-card:nth-child(3n+1) {
+        clear: both; /* Clear after every third image to create a new row */
+    }
+
+    .image-card img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    @media screen and (max-width: 768px) {
+        .image-card {
+            flex: 0 0 calc(50% - 20px); /* Set width to 50% for smaller screens */
+        }
+        .image-card:nth-child(3n+1) {
+            clear: none; /* Remove clear for smaller screens */
+        }
+    }
+
+    @media screen and (max-width: 480px) {
+        .image-card {
+            flex: 0 0 100%; /* Set width to 100% for even smaller screens */
+        }
+    }
       </style>
 </head>
 
@@ -318,47 +357,42 @@ Java, ensuring secure and efficient transactional operations.
                 <h1 class="display-1 text-uppercase text-white" style="-webkit-text-stroke: 1px #dee2e6;">SOCIAL MEDIA</h1>
                 <h1 class="position-absolute text-uppercase text-primary">My Portfolio</h1>
             </div>
-            <div class="row portfolio-container">
-                    <!-- Offline picture icon -->
-                    <!-- Text or additional content if needed -->
-                <font size = "6"> 
-                    <img src="img/leet.png" alt="Icon" class="icon-img">
-                    Leetcode :
-                    <a href="https://leetcode.com/abhiabhishek9347/" target="_blank">https://leetcode.com/abhiabhishek9347/</a>
-                </font> 
-                <font size = "6"> 
-                    <img src="img/HR.png" alt="Icon" class="icon-img">
-                    HackerRank :
-                    <a href="https://www.hackerrank.com/profile/abhi9347" target="_blank">https://www.hackerrank.com/profile/abhi9347</a>
-                </font> 
-                <font size = "6"> 
-                    <img src="img/notion.png" alt="Icon" class="icon-img">
-                    Notion :
-                    <a href="https://www.notion.so/Data-Structures-df26af49127e40bcb785fad490262698?pvs=4" target="_blank">https://www.notion.so/Profile/Abhi</a>
-                </font>
-                <font size = "6"> 
-                    <img src="img/linkedin.png" alt="Icon" class="icon-img">
-                    LinkedIn :
-                    <a href="https://www.linkedin.com/in/abhishek-gajavilli-65797b1a9/" target="_blank">https://www.linkedin.com/in/abhishek-gajavilli-65797b1a9/</a>
-                </font>
-                <font size = "6"> 
-                    <img src="img/github.png" alt="Icon" class="icon-img">
-                    Github :
-                    <a href="https://github.com/Abhishek84313" target="_blank">https://github.com/Abhishek84313</a>
-                </font>
-            </div>
+            <!--<div class="row portfolio-container">-->
+                <div class="container1">
+                    <div class="image-card">
+                        <a href="https://leetcode.com/abhiabhishek9347/" target="_blank"></href><img src="img/leet.png" alt="Image 1" width = "150" height = "150" class="fnt"></a>
+                        <font size = "5"><a href="https://leetcode.com/abhiabhishek9347/" target="_blank">LeetCode</a></font>
+                    </div>
+                    <div class="image-card">
+                        <a href="https://www.hackerrank.com/profile/abhi9347" target="_blank"><img src="img/HR.png" alt="Image 2" width = "150" height = "150" class="fnt"></a>
+                        <font size = "5"><a href="https://www.hackerrank.com/profile/abhi9347" target="_blank">HackerRank</a>   </font>     
+                    </div>
+                    <div class="image-card">
+                        <a href="https://www.notion.so/Data-Structures-df26af49127e40bcb785fad490262698?pvs=4" target="_blank"><img src="img/notion.png" alt="Image 3" width = "150" height = "150" class="fnt"></a>
+                        <font size = "5"><a href="https://www.notion.so/Data-Structures-df26af49127e40bcb785fad490262698?pvs=4" target="_blank">Notion</a></font>
+                    </div>
+                    <div class="image-card">
+                        <a href="https://www.linkedin.com/in/abhishek-gajavilli-65797b1a9/" target="_blank"><img src="img/linkedin.png" alt="Image 4" width = "150" height = "150" class="fnt"></a>
+                        <font size = "5"><a href="https://www.linkedin.com/in/abhishek-gajavilli-65797b1a9/" target="_blank">LinkedIn</a></font>
+                    </div>
+                    <div class="image-card">
+                        <a href="https://github.com/Abhishek84313" target="_blank"><img src="img/github.png" alt="Image 5" width = "150" height = "150" class="fnt"></a>
+                        <font size = "5"><a href="https://github.com/Abhishek84313" target="_blank">Github</a></font>
+                    </div>
+                    
+                </div>
+            <!--</div>-->
         </div>
     </div>
     <!-- Portfolio End -->
 
 
     <!-- Testimonial Start -->
-    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-    <br><br><br>
+    <br><br>
     <div class="container-fluid py-5" id="testimonial">
         <div class="container">
             <div class="position-relative d-flex align-items-center justify-content-center">
-                <h1 class="display-1 text-uppercase text-white" style="-webkit-text-stroke: 1px #dee2e6;">Certifications</h1>
+                <h1 class="display-1 text-uppercase text-white" style="-webkit-text-stroke: 1px #dee2e6;">Honors</h1>
                 <h1 class="position-absolute text-uppercase text-primary">My Certificates</h1>
             </div>
             <div class="row justify-content-center">
@@ -486,7 +520,7 @@ Java, ensuring secure and efficient transactional operations.
                 <span class="px-3">|</span>
                 <a class="text-white" href="#">Help</a>
             </div>
-            <p class="m-0">&copy; <a class="text-white font-weight-bold" href="#">Domain Name</a>. All Rights Reserved. Designed by <a class="text-white font-weight-bold">Abhishek</a>
+            <p class="m-0">&copy; <a class="text-white font-weight-bold" href="#"></a>Designed by <a class="text-white font-weight-bold">Abhishek</a>
             </p>
         </div>
     </div>
